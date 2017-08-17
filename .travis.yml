@@ -1,0 +1,14 @@
+language: c
+
+os:
+  - osx
+
+compiler:
+  - gcc
+
+before_install:
+  - brew update
+  - brew outdated libusb || brew upgrade libusb
+
+script :
+  - make
