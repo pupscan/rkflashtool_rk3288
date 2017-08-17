@@ -1,7 +1,7 @@
-rkflashtool_rk3066
+rkflashtool_rk3xxx
 ==================
 
-rkflashtool with RK3066 support. To backup the system and flash images from Linux.
+rkflashtool with RK3288 & RK3066 support. To backup the system and flash images from Linux.
 
 
 
