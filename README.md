@@ -1,9 +1,10 @@
+[![Build Status](https://travis-ci.org/pupscan/rkflashtool_rk3288.svg?branch=master)](https://travis-ci.org/pupscan/rkflashtool_rk3288)
+
 rkflashtool_rk3xxx
 ==================
 
-rkflashtool with RK3288 & RK3066 support. To backup the system and flash images from Linux.
-
-
+RKFlashtool with RK3288 support.  
+To backup the system and flash images from Linux.
 
 
 
