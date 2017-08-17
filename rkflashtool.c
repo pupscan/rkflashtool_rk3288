@@ -153,9 +153,10 @@ int main(int argc, char **argv) {
 
     if (!(h = libusb_open_device_with_vid_pid(c, 0x2207, 0x290a)))
         if (!(h = libusb_open_device_with_vid_pid(c, 0x2207, 0x281a)))
-   		if (!(h = libusb_open_device_with_vid_pid(c, 0x2207, 0x300a))) //RK3066
-            if (!(h = libusb_open_device_with_vid_pid(c, 0x2207, 0x310b))) //RK3188
-	            fatal("cannot open device\n");
+       		if (!(h = libusb_open_device_with_vid_pid(c, 0x2207, 0x300a))) //RK3066
+                if (!(h = libusb_open_device_with_vid_pid(c, 0x2207, 0x310b))) //RK3188
+                    if (!(h = libusb_open_device_with_vid_pid(c, 0x2207, 0x320a))) //RK3288
+	                    fatal("cannot open device\n");
 
     if (libusb_kernel_driver_active(h, 0) == 1) {
         info("kernel driver active\n");
