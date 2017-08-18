@@ -7,8 +7,8 @@ compiler:
   - gcc
 
 before_install:
-  - echo With PATH=$PATH
-  - brew outdated libusb || brew upgrade libusb
+  - echo With PATH $PATH
+  - brew list libusb || brew install libusb
   - ls -l /usr/local/Cellar/libusb/
   - export LIBUSB=/usr/local/Cellar/libusb/1.0.21
 
