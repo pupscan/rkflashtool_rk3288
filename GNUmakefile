@@ -3,7 +3,7 @@
 CC	= $(CROSSPREFIX)gcc
 LD	= $(CC)
 CFLAGS	= -O2 -W -Wall
-LDFLAGS	= -s
+LDFLAGS	=
 LIBS	= -lusb-1.0
 
 ifdef LIBUSB
