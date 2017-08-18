@@ -7,11 +7,11 @@ compiler:
   - gcc
 
 before_install:
-  - brew update
+  - echo With PATH=$PATH
   - brew outdated libusb || brew upgrade libusb
   - ls -l /usr/local/Cellar/libusb/
   - export LIBUSB=/usr/local/Cellar/libusb/1.0.21
 
 script :
-  - echp With LIBUS=$LIBUSB
+  - echo With LIBUS=$LIBUSB
   - make
