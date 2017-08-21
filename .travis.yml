@@ -1,22 +1,17 @@
 language: c
-
 os:
-  - osx
-
+- osx
 compiler:
-  - gcc
-
+- gcc
 before_install:
-  - brew list libusb || brew install libusb
-  - export LIBUSB=/usr/local/Cellar/libusb/1.0.21
-
-script :
-  - make
-
+- brew list libusb || brew install libusb
+- export LIBUSB=/usr/local/Cellar/libusb/1.0.21
+script:
+- make
 deploy:
   provider: releases
-  api_key: $GITHUB_OAUTH_TOKEN
+  api_key:
+    secure: hAeOn7KxEIBk4s5JUebpvTB5PsV9eRHk2OC6W/vBUDeMHcfthaeCPCSRFjL51MmD4wkAYM5DHEqipkiubZzjjfMxCMD85fRZBJvvSpgxDAAvipcqnuCXsLJ+6AzIHr5fhCJO+4cEw+kCx9lBIjWD6XNJ5sWfkfHWD6pQFuY6oqAQbcmCIS57I5pjOSxrja4x7aPqZK0si10TWnEc+EhFKAXN8Gp1r//kYZPeJ4x9t3tuXpeb7UuI0PRLyPTmKRhE61oMph+mCMNV68bwxZl9QJpWJvbA1477Vxk7efeRXOwOGp3xe9QqU3kn2WqIkAJde4yI1RnniePaRc19E7xXU70AHFZEPM6NkKxfL9IBfJzqC9dvr7ah7Q4Y+QvIKvqrSRL53hMgnLYoLdy9CfW96elY69lxpaqRYzmjNH79Xhv2q9gLVK/6GgwTYb8vW+dS+6LY2EwjOIbokJ8+CRzGLTU39B1dCX6u1Rsc/zrSlvKpuX7vjW6XFMIWnPhKVKSk32KPUtzjEjAptzr5MYOYVoSv2Tbsh2wEv4bZtaDEja7bEtbtc6BDiOHWDNkLvnxOBn6sRyumPs5/0SFxqen5QEaTdiGMR56LaBmw2092ikyE4jpPx04MY9m3UKU5+1Cxd2j4CV3dApAjfXz6cwzQhw7ipATF74LvfAGkdL/rEWk=
   file: rkflashtool
-  skip_cleanup: true
   on:
-    tags: true
+    repo: pupscan/rkflashtool_rk3288
