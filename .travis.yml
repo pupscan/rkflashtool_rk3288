@@ -7,11 +7,16 @@ compiler:
   - gcc
 
 before_install:
-  - echo With PATH $PATH
   - brew list libusb || brew install libusb
-  - ls -l /usr/local/Cellar/libusb/
   - export LIBUSB=/usr/local/Cellar/libusb/1.0.21
 
 script :
-  - echo With LIBUS=$LIBUSB
   - make
+
+deploy:
+  provider: releases
+  api_key: $GITHUB_OAUTH_TOKEN
+  file: rkflashtool
+  skip_cleanup: true
+  on:
+    tags: true
