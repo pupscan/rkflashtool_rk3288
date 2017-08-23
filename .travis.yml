@@ -15,3 +15,4 @@ deploy:
   file: rkflashtool
   on:
     repo: pupscan/rkflashtool_rk3288
+    tags: true
